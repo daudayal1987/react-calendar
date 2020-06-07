@@ -12,7 +12,7 @@ import {
     SET_AVAILABILITY
 } from './actionTypes';
 
-import {GOOGLE_API_KEY, GOOGLE_CALENDAR_CLIENT_ID, GOOGLE_CALENDAR_DISCOVERY_DOCS, GOOGLE_CALENDAR_SCOPES} from '../config';
+// import {GOOGLE_API_KEY, GOOGLE_CALENDAR_CLIENT_ID, GOOGLE_CALENDAR_DISCOVERY_DOCS, GOOGLE_CALENDAR_SCOPES} from '../config';
 
 export const prevWeek = () => ({
     type: PREV_WEEK
@@ -50,13 +50,13 @@ export const syncCalendar = () => {
 
         let calendarReducerState = getState().calendars;
         dispatch(syncGoogleCalenderRequest());
-
+console.log(process.env)
         let initGoogleClient = () => {
             gapi.client.init({
-                apiKey: GOOGLE_API_KEY,
-                clientId: GOOGLE_CALENDAR_CLIENT_ID,
-                discoveryDocs: GOOGLE_CALENDAR_DISCOVERY_DOCS,
-                scope: GOOGLE_CALENDAR_SCOPES
+                apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
+                clientId: process.env.REACT_APP_GOOGLE_CALENDAR_CLIENT_ID,
+                discoveryDocs: process.env.REACT_APP_GOOGLE_CALENDAR_DISCOVERY_DOCS,
+                scope: process.env.REACT_APP_GOOGLE_CALENDAR_SCOPES
             }).then(()=>{
                 dispatch(syncGoogleClientInitDone());
                 gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
