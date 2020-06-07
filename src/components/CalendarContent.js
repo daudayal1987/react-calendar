@@ -132,7 +132,7 @@ class CalendarContent extends Component {
 
         let rowHeaders = [];
         for(let i=startWeek; i<=endWeek; i++){
-            rowHeaders.push(<div className="col"><span className="badge m-2 p-2">{moment().startOf('week').add(i, 'days').format('DD/MM ddd')}</span></div>);
+            rowHeaders.push(<div className="col"><span className="badge m-2 p-2">{moment().startOf('year').add(this.props.currentWeek, 'week').startOf('week').add(i, 'days').format('DD/MM ddd')}</span></div>);
         }
 
         let colHeaders = [];
@@ -194,7 +194,8 @@ const mapStateToProps = state => {
     return {
         weekendStatus: state.calendars.weekendStatus,
         googleCalendar: state.calendars.googleCalendar,
-        availability: state.calendars.availability
+        availability: state.calendars.availability,
+        currentWeek: state.calendars.currentWeek
     }
 }
 
