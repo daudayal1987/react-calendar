@@ -1,0 +1,5 @@
+export const 
+GOOGLE_API_KEY = 'YOUR_API_KEY',
+GOOGLE_CALENDAR_CLIENT_ID = 'YOUR_CLIENT_ID',
+GOOGLE_CALENDAR_DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"],
+GOOGLE_CALENDAR_SCOPES = "https://www.googleapis.com/auth/calendar.readonly";

@@ -1,0 +1,125 @@
+.masthead-header {
+    /* height: 100vh;
+    min-height: 500px; */
+    background-image: url('./header.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #eeeeee;
+  }
+
+  .masthead-footer {
+    background-image: url('./footer.png');
+    background-size: cover;
+    background-position: -10px -10px;
+    background-repeat: no-repeat;
+    background-color: orange;
+  }
+
+  .footer ul li{
+      margin: 10px 0 0 0;
+  }
+
+  .footer .socials{
+      margin: 10px 0;
+  }
+
+  .calendar-slot{
+    width: 100%; 
+    height: 60px; 
+    background-color: white;
+    margin: 1px;
+  }
+
+  .radio-lg{
+    width: 24px; 
+    height: 24px;
+  }
+
+  .input-availability{
+    width: 150px !important;
+  }
+
+  .calendar{
+    background-color: #eeeeee;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn.selected{
+    background-color: orange;
+    border: orange;
+  }
+
+  .calendar-table{
+    table-layout: fixed;
+  }
+
+  .calendar-label{
+    width: 100%;
+    overflow: hidden;
+    background-color: orange;
+  }
+
+  .div-calendar-hidden-area{
+  }
+
+  .div-calendar-hidden-rows{
+    height: 60px;
+    border-bottom: #cccccc solid 1px;
+  }
+
+  .div-calendar-hidden-rows::after{
+    content: '';
+    width: 100%;
+    border-bottom: #cccccc solid 1px;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .div-calendar-cols{
+    border-left: #cccccc solid 1px;
+  }
+
+  .div-calendar-col-header{
+    height: 60px;
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+  }
+
+  .google-event{
+    position: absolute;
+    background-color: cornflowerblue;
+    white-space: break-spaces;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .normal-event{
+    position: absolute;
+    background-color: orange;
+    white-space: break-spaces;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .event-time{
+    font-weight: bold;
+  }
+
+  .event-summary{
+    white-space: break-spaces;
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  .masthead-footer .socials a{
+    margin: 5px;
+  }
