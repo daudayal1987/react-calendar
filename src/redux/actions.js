@@ -55,7 +55,7 @@ console.log(process.env)
             gapi.client.init({
                 apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
                 clientId: process.env.REACT_APP_GOOGLE_CALENDAR_CLIENT_ID,
-                discoveryDocs: process.env.REACT_APP_GOOGLE_CALENDAR_DISCOVERY_DOCS,
+                discoveryDocs: [process.env.REACT_APP_GOOGLE_CALENDAR_DISCOVERY_DOCS],
                 scope: process.env.REACT_APP_GOOGLE_CALENDAR_SCOPES
             }).then(()=>{
                 dispatch(syncGoogleClientInitDone());
