@@ -50,7 +50,7 @@ export const syncCalendar = () => {
 
         let calendarReducerState = getState().calendars;
         dispatch(syncGoogleCalenderRequest());
-console.log(process.env)
+
         let initGoogleClient = () => {
             gapi.client.init({
                 apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
